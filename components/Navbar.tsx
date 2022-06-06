@@ -1,11 +1,11 @@
 import React from 'react';
-import { Navbar as MantineNavbar } from '@mantine/core'
+import { MantineNumberSize, Navbar as MantineNavbar } from '@mantine/core'
 import { HomeLinks } from './HomeLinks';
 import { User } from './User';
 
-export function Navbar() {
+export function Navbar({ opened }: { opened: boolean }) {
   return (
-    <MantineNavbar width={{ base: 300 }} height={500} p="xs">
+    <MantineNavbar width={{ sm: 200, lg: 300 }} p="md" hiddenBreakpoint="sm" hidden={!opened}>
       <MantineNavbar.Section grow mt="xs">
         <HomeLinks />
       </MantineNavbar.Section>
