@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { AppShell, Footer } from '@mantine/core'
+import { AppShell } from '@mantine/core'
 import { Navbar } from './Navbar';
 import { Header } from './Header';
+import { Footer } from './Footer';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [opened, setOpened] = useState(false);
@@ -11,11 +12,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       padding="md"
       navbar={<Navbar opened={opened} />}
       header={<Header opened={opened} setOpened={setOpened} />}
-      footer={
-        <Footer height={60} p="md">
-          Built with love by Cabosante
-        </Footer>
-      }
+      footer={<Footer />}
       styles={(theme) => ({
         main: {
           backgroundColor:
