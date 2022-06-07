@@ -1,5 +1,5 @@
 import React from 'react';
-import { MantineNumberSize, Navbar as MantineNavbar } from '@mantine/core'
+import { Navbar as MantineNavbar } from '@mantine/core'
 import { HomeLinks } from './HomeLinks';
 import { User } from './User';
 
